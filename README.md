@@ -128,9 +128,9 @@ Nilai di bawah batas bawah akan digantikan oleh batas bawah, dan sebaliknya untu
   df['track_idx'] = df['track_id'].map(track_to_idx)
 Hasil: Setiap track_id unik memiliki indeks integer (0 hingga N-1)
 
-5. Normalisasi popularity
+4. Normalisasi popularity
 
-Normalisasi nilai popularity dari skala 0-100 ke 0-1
+#Normalisasi nilai popularity dari skala 0-100 ke 0-1
 df['popularity_norm'] = df['popularity'] / 100.0
 
 Alasan:
@@ -140,12 +140,11 @@ Mengubah skala [0,100] → [0,1] untuk konsistensi dengan output sigmoid
 Mempercepat konvergensi selama training
    Mengubah skala popularity dari 0-100 → 0-1.
 
-7. Train-Test Split (80:20)
+5. Train-Test Split (80:20)
 
 Strategi: Stratified sampling berdasarkan popularity
 
 Implementasi:
-
 from sklearn.model_selection import train_test_split
 train_df, test_df = train_test_split(df, test_size=0.2, stratify=df['popularity_bin'], random_state=42)
 
@@ -228,16 +227,13 @@ Input: track_id = "30kaQow1m0y1G2UcNTTSYk"
 hasil : Sistem telah memberikan 10 rekomendasi lagu yang dinilai memiliki kemiripan dengan lagu input (30kaQow1m0y1G2UcNTTSYk). Semua lagu yang direkomendasikan memiliki prediksi popularitas yang sama (35.42), yang bisa jadi merupakan hasil dari model regresi prediktif yang dibuat (misalnya menggunakan neural network) berdasarkan fitur-fitur seperti danceability, energy, valence, dsb.
 ## Kesimpulan
 - Model berhasil memprediksi popularity lagu dengan RMSE 0.185.
-
 - Sistem rekomendasi dapat memberikan 10 lagu terbaik berdasarkan preferensi pengguna.
-
 - Cold-start problem masih menjadi tantangan (perlu pendekatan hybrid dengan Content-Based Filtering).
 
 ## Saran Pengembangan:
 
-Gabungkan dengan Content-Based Filtering untuk rekomendasi pengguna baru.
-
-Gunakan Deep Learning (RNN/Transformer) untuk analisis pola waktu.
+- Gabungkan dengan Content-Based Filtering untuk rekomendasi pengguna baru.
+- Gunakan Deep Learning (RNN/Transformer) untuk analisis pola waktu.
 ## Referensi
 
 [[1](https://developers.google.com/machine-learning/recommendation/collaborative/basics)]  
