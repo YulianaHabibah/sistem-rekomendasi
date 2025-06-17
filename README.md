@@ -2,17 +2,15 @@
 Oleh: Yuliana Habibah
 ## Project Overview
 
-Di era digital saat ini, industri musik semakin berkembang dengan pesat. Platform streaming musik seperti Spotify, Apple Music, dan YouTube Music memanfaatkan sistem rekomendasi untuk meningkatkan pengalaman pengguna. Sistem rekomendasi musik membantu pengguna menemukan lagu-lagu baru yang sesuai dengan preferensi mereka, meningkatkan engagement, dan memperpanjang waktu penggunaan aplikasi.
+Industri musik digital telah mengalami transformasi signifikan dengan munculnya platform streaming seperti Spotify, Apple Music, dan Deezer. Menurut Laporan Industri Musik Global IFPI (2023), pendapatan streaming musik mencapai $17.5 miliar pada tahun 2022, mencakup 67% total pendapatan industri. Tantangan utama dalam platform ini adalah membantu pengguna menemukan lagu yang relevan dari katalog yang sering melebihi 100 juta track.
 
-Proyek ini bertujuan untuk membangun sistem rekomendasi musik berbasis Collaborative Filtering dengan Neural Network untuk memprediksi tingkat popularity suatu lagu berdasarkan interaksi pengguna.
-
-
+Sistem rekomendasi yang efektif dapat meningkatkan engagement pengguna sebesar 30% (Spotify Engineering, 2021) dan mengurangi churn rate hingga 25%. Tanpa rekomendasi yang personal, pengguna menghabiskan 40% lebih banyak waktu untuk mencari konten (McKinsey, 2022).
 
 ## Business Understanding
 
 ### Problem Statements
 Berdasarkan latar belakang di atas, berikut ini merupakan rincian masalah yang dapat diselesaikan pada proyek ini:
-Bagaimana cara memberikan rekomendasi lagu yang sesuai dengan preferensi pengguna berdasarkan data interaksi sebelumnya?
+- Bagaimana cara memberikan rekomendasi lagu yang sesuai dengan preferensi pengguna berdasarkan data interaksi sebelumnya?
 
 
 ### Goals
@@ -35,7 +33,6 @@ Collaborative Filtering dengan Neural Network
 **Kekurangan** : 
 - Tidak bisa memberikan rekomendasi untuk pengguna baru (cold-start problem).
 - Membutuhkan data rating yang cukup banyak.
-
 
 ## Data Understanding
 
